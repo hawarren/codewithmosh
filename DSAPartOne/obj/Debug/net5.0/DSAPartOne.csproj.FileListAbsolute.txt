@@ -1,0 +1,16 @@
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne.deps.json
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne.runtimeconfig.json
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne.runtimeconfig.dev.json
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne.dll
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/bin/Debug/net5.0/DSAPartOne.pdb
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.csproj.AssemblyReference.cache
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.GeneratedMSBuildEditorConfig.editorconfig
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.AssemblyInfoInputs.cache
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.AssemblyInfo.cs
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.csproj.CoreCompileInputs.cache
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.dll
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/refint/DSAPartOne.dll
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.pdb
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/DSAPartOne.genruntimeconfig.cache
+/home/hanifw/SourceControl/codewithmosh/DSAPartOne/obj/Debug/net5.0/ref/DSAPartOne.dll
