@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DSAPartOne
 {
@@ -12,8 +13,8 @@ namespace DSAPartOne
             myArray.insert(20);
             myArray.insert(30);
             myArray.insert(40);
-            myArray.insert(50);
-            myArray.removeAt(3);
+            //myArray.insert(50);
+            //myArray.removeAt(3);
             Console.WriteLine("Index of 10 is {0}", myArray.indexOf(10));
             Console.WriteLine("Index of 100 is {0}", myArray.indexOf(100));
             myArray.print();
@@ -24,34 +25,23 @@ namespace DSAPartOne
     }
     class CustomArray
     {
-        private int arraySize { get; set; }
+        private int count { get; set; }
         private int[] internalArray { get; set; }
         public int internalLength { get { return internalArray.Length; } }
 
         public CustomArray(int initialSize)
         {
-            arraySize = 0;
+            count = 0;
             internalArray = new int[initialSize];
         }
         public void insert(int newItem)
-        {
-            var itemAdded = false;
-            for (var i = 0; i < internalArray.Length; i++)
+        {            
+            if (internalArray.Length == count)
             {
-                if (internalArray[i] == 0)//look for first empty position
-                {
-                    internalArray[i] = newItem;
-                    itemAdded = true;
-                    if (itemAdded)
-                    {
-                        arraySize++;
-                        Console.WriteLine("{0} was added to the array", newItem);
-                        resize();
-                    }
-                    return;
-                }
+                resize();
             }
-
+            internalArray[count++] = newItem; //add item to array at last position, then increment count
+            Console.WriteLine("{0} was added to the array", newItem);            
         }
         public int removeAt(int indexToDelete)
         {
@@ -59,7 +49,7 @@ namespace DSAPartOne
             {
                 var tempNumber = internalArray[indexToDelete];
                 internalArray[indexToDelete] = 0;
-                arraySize--;
+                count--;
                 Console.WriteLine("{0} was deleted from position {1}", tempNumber, indexToDelete);
                 return tempNumber;
             }
@@ -81,56 +71,29 @@ namespace DSAPartOne
             }
             return -1;
         }
-        public int resize()
+        void resize()
         {
-            if (arraySize * 2 >= internalArray.Length)
+            int[] bigInternalArray = new int[internalArray.Length * 2];
+                       
+            for (var i = 0; i < count; i++ )
             {
-                int[] bigInternalArray = new int[internalArray.Length * 2];
-                var i = 0;
-                var k = 0;
-                var newArraysize = 0;
-                while (newArraysize < arraySize && i  < internalLength)
-                {
-
-                    //skip if original array index is empty
-                    if (internalArray[i] == 0)
-                    {
-                        i++;
-                        continue;
-                    }
-                    //put item in new array
-                    bigInternalArray[k] = internalArray[i];
-                    //next position of original array
-                    i++;
-                    //next position of big array
-                    k++;
-                    //update size of big (new) array
-                    newArraysize++;
-
-                    if (internalArray.Length - 1 == i)
-                    {
-                        break;
-                    }
-                }
-
+                //put item in new array
+                bigInternalArray[i] = internalArray[i];
+               
+                //update size of big (new) array
                 internalArray = bigInternalArray;
-                Console.WriteLine("Array using {0} of {1} slots", arraySize, internalArray.Length);
-            }
-            else if (arraySize * 4 >= internalArray.Length)
-            {
-                int[] smallInternalArray = new int[internalArray.Length];
-                internalArray = smallInternalArray;
-            }
-
-            return arraySize;
+                Console.WriteLine("Array using {0} of {1} slots", count, internalArray.Length);
+            }           
         }
         public void print()
         {
+            List<int> arrayList = new List<int>();
             for (var i = 0; i < internalArray.Length; i++)
             {
-
+                arrayList.Add(internalArray[i]);
                 Console.WriteLine(internalArray[i]);
             }
+            Console.WriteLine(arrayList.ToString());
         }
 
     }
